@@ -1,0 +1,54 @@
+services:
+  - type: web
+    name: vnpr-api
+    runtime: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt && python manage.py collectstatic --noinput"
+    startCommand: "daphne -b 0.0.0.0 -p $PORT vnpr.routing:application"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: false
+      - key: DB_NAME
+        fromDatabase:
+          name: vnpr-db
+          property: database
+      - key: DB_USER
+        fromDatabase:
+          name: vnpr-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: vnpr-db
+          property: password
+      - key: DB_HOST
+        fromDatabase:
+          name: vnpr-db
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: vnpr-db
+          property: port
+      - key: REDIS_URL
+        fromService:
+          type: redis
+          name: vnpr-redis
+          property: connectionString
+      - key: GOOGLE_CLOUD_VISION_API_KEY
+        sync: false
+      - key: CORS_ALLOWED_ORIGINS
+        value: "https://vnpr.vercel.app,https://vnpr-frontend.vercel.app"
+
+databases:
+  - name: vnpr-db
+    plan: free
+    databaseName: vnpr_db
+    user: vnpr_user
+
+redis:
+  - name: vnpr-redis
+    plan: free
+    ipAllowList: []
