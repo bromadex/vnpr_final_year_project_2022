@@ -6,7 +6,7 @@ A complete traffic enforcement system that detects speeding vehicles and red lig
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 ┌─────────────────┐     ┌──────────────────┐     ┌─────────────────┐
@@ -24,7 +24,7 @@ A complete traffic enforcement system that detects speeding vehicles and red lig
 
 ---
 
-## 🚀 Quick Start (Docker)
+##  Quick Start (Docker)
 
 ### Prerequisites
 - Docker & Docker Compose
@@ -229,7 +229,7 @@ python main.py
 
 ---
 
-## 🧠 How It Works
+##  How It Works
 
 ### 1. Speed Detection
 ```
@@ -267,7 +267,7 @@ Broadcast via WebSocket → Dashboard
 
 ---
 
-## 🎨 Dashboard Features
+##  Dashboard Features
 
 - **Real-time Updates**: WebSocket-powered live incident feed
 - **Interactive Maps**: Leaflet.js with violation markers
@@ -278,7 +278,7 @@ Broadcast via WebSocket → Dashboard
 
 ---
 
-## 🔐 Security
+##  Security
 
 - Django's built-in authentication with custom User model
 - CORS configured for frontend origin
@@ -288,7 +288,7 @@ Broadcast via WebSocket → Dashboard
 
 ---
 
-## 🛠️ Development
+##  Development
 
 ### Backend Only
 ```bash
@@ -318,7 +318,7 @@ cd frontend && npm test
 
 ---
 
-## 📊 Comparison: Original vs Modernized
+##  Comparison: Original vs Modernized
 
 | Feature | Original (2022) | Modernized (2024) |
 |---------|----------------|-------------------|
@@ -335,7 +335,7 @@ cd frontend && npm test
 
 ---
 
-## 📝 License
+##  License
 
 This project was originally developed by **Clement Mpala** as a final year project at NUST (National University of Science and Technology), Zimbabwe.
 
@@ -343,7 +343,7 @@ Modernized version maintained with ❤️.
 
 ---
 
-## 🙏 Acknowledgements
+##  Acknowledgements
 
 - Original project supervisor: Eng. M. Nleya
 - NUST Department of Electronic Engineering
